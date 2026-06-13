@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breakdown Nilai Tugas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Penilaian · Rubrik Kriteria</div>
+  <h1>Breakdown Nilai Tugas</h1>
+  <p class="sub">Masukkan kriteria beserta poin maksimalnya dan nilai akhir yang sudah kamu punya. Alat ini merekonstruksi kriteria mana yang terpenuhi (penuh / sebagian / tidak) sehingga totalnya sama dengan nilai akhir, lalu menampilkan rumusnya.</p>
+
+  <div class="card">
+    <h2>Kriteria Penilaian</h2>
+    <table>
+      <thead><tr><th>Kriteria</th><th class="num">Poin Maks</th><th></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <button class="addbtn" onclick="addRow()">+ Tambah kriteria</button>
+    <div class="totalmax" id="totalmax">Total poin maksimal: 0</div>
+  </div>
+
+  <div class="card">
+    <h2>Nilai Akhir Tercatat</h2>
+    <div class="finalrow">
+      <label for="final">Nilai akhir:</label>
+      <input type="number" id="final" step="any" placeholder="contoh: 86">
+    </div>
+    <label class="scaleopt"><input type="checkbox" id="scale100" checked> Nilai akhir dalam skala 0–100 (poin maks akan dinormalisasi ke 100)</label>
+  </div>
+
+  <button class="go" onclick="breakdown()">Breakdown & Tampilkan Rumus</button>
+
+  <div class="card result" id="result">
+    <h2>Hasil Breakdown</h2>
+    <table class="bd" id="bdtable"></table>
+    <div class="formula" id="formula"></div>
+    <div id="verdict"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
