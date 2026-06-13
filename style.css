@@ -24,6 +24,11 @@ td.num input{text-align:right}
 .finalrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .finalrow label{font-weight:600;font-size:15px}
 .finalrow input{max-width:150px}
+.identityrow{display:flex;gap:14px;flex-wrap:wrap}
+.identityrow .field{flex:1;min-width:180px;display:flex;flex-direction:column;gap:6px}
+.identityrow label{font-weight:600;font-size:15px}
+.identityresult{font-size:14px;color:var(--muted);margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.identityresult b{color:var(--ink)}
 .scaleopt{font-size:13px;color:var(--muted);margin-top:10px;display:flex;align-items:center;gap:8px}
 .go{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:13px 28px;font-size:16px;font-weight:700;cursor:pointer;width:100%;margin-top:4px}
 .go:hover{background:#255540}

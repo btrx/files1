@@ -90,6 +90,16 @@ function breakdown() {
   vd.className = 'verdict ok';
   vd.innerHTML = '✓ Breakdown ini menghasilkan nilai akhir ' + computed + ', sesuai dengan yang kamu catat.';
   vd.innerHTML += '<div class="note">Catatan: breakdown ini satu kemungkinan (kriteria dipenuhi dari poin terbesar dulu, sisanya jadi nilai sebagian). Kamu bisa atur ulang poin maks tiap kriteria untuk mencocokkan penilaian sebenarnya.</div>';
+
+  // Identity
+  const studentName = document.getElementById('studentname').value.trim() || '-';
+  const studentClass = document.getElementById('studentclass').value.trim() || '-';
+  const idEl = document.getElementById('identityresult');
+  idEl.innerHTML = '';
+  const nameB = document.createElement('b'); nameB.textContent = 'Nama:';
+  const classB = document.createElement('b'); classB.textContent = 'Kelas:';
+  idEl.append(nameB, ' ' + studentName + '  |  ', classB, ' ' + studentClass);
+
   document.getElementById('result').style.display = 'block';
 }
 

@@ -23,6 +23,20 @@
   </div>
 
   <div class="card">
+    <h2>Identitas</h2>
+    <div class="identityrow">
+      <div class="field">
+        <label for="studentname">Nama:</label>
+        <input type="text" id="studentname" placeholder="Nama siswa">
+      </div>
+      <div class="field">
+        <label for="studentclass">Kelas:</label>
+        <input type="text" id="studentclass" placeholder="contoh: XII RPL 1">
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
     <h2>Nilai Akhir Tercatat</h2>
     <div class="finalrow">
       <label for="final">Nilai akhir:</label>
@@ -35,6 +49,7 @@
 
   <div class="card result" id="result">
     <h2>Hasil Breakdown</h2>
+    <div class="identityresult" id="identityresult"></div>
     <table class="bd" id="bdtable"></table>
     <div class="formula" id="formula"></div>
     <div id="verdict"></div>
